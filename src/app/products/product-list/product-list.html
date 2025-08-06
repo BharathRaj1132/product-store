@@ -1,14 +1,14 @@
-<!-- 🔍 Search Bar -->
+
 <div class="mb-3">
   <input type="text" class="form-control" placeholder="Search products..."
          [(ngModel)]="searchText">
 </div>
 
-<!-- ⚠️ Loading/Error Messages -->
+
 <div *ngIf="loading" class="text-center">Loading...</div>
 <div *ngIf="error" class="text-danger">{{error}}</div>
 
-<!-- 🛒 Product Grid -->
+
 <div class="row row-cols-1 row-cols-md-4 g-4">
   <div class="col"
        *ngFor="let product of filteredProducts | paginate: { itemsPerPage: 8, currentPage: p }">
@@ -27,12 +27,12 @@
   </div>
 </div>
 
-<!-- 📄 Pagination controls -->
+
 <div class="mt-4 text-center">
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
 
-<!-- 🌟 Extra styling -->
+
 <style>
   .product-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
