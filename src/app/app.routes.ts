@@ -9,5 +9,5 @@ export const routes: Routes = [
   { path: 'products/:id', component: ProductDetailComponent },
   { path: 'categories', component: CategoryListComponent },
   { path: 'categories/:name', component: ProductListComponent },
-  { path: '**', redirectTo: 'products' }   // ✅ Fallback route for invalid URLs
+  { path: '**', redirectTo: 'products' }   
 ];
