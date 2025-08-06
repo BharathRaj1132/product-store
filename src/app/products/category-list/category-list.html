@@ -1,0 +1,36 @@
+<!-- ⚠️ Loading/Error Messages -->
+<div *ngIf="loading" class="text-center">Loading categories...</div>
+<div *ngIf="error" class="text-danger">{{error}}</div>
+
+<!-- 📂 Categories Grid -->
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+  <div class="col" *ngFor="let cat of categories">
+    <div class="card category-card h-100 shadow-sm">
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <h5 class="card-title text-capitalize mb-0">{{cat}}</h5>
+        <a [routerLink]="['/categories', cat]" class="btn btn-outline-primary btn-sm">
+          View
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 🌟 Extra styling -->
+<style>
+  .category-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid #007bff;
+  }
+  .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+</style>

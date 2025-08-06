@@ -1,0 +1,11 @@
+<div *ngIf="loading" class="text-center">Loading...</div>
+<div *ngIf="error" class="text-danger">{{error}}</div>
+
+<div *ngIf="product" class="container">
+  <h2>{{product.title}}</h2>
+  <img [src]="product.image" alt="{{product.title}}" style="max-width:250px;height:auto;">
+  <p>{{product.description}}</p>
+  <p><strong>Category:</strong> {{product.category}}</p>
+  <h4>₹{{product.price}}</h4>
+  <button class="btn btn-secondary" (click)="goBack()">Back to Products</button>
+</div>
