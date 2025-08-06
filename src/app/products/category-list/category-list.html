@@ -1,8 +1,8 @@
-<!-- ⚠️ Loading/Error Messages -->
+
 <div *ngIf="loading" class="text-center">Loading categories...</div>
 <div *ngIf="error" class="text-danger">{{error}}</div>
 
-<!-- 📂 Categories Grid -->
+
 <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
   <div class="col" *ngFor="let cat of categories">
     <div class="card category-card h-100 shadow-sm">
@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<!-- 🌟 Extra styling -->
+
 <style>
   .category-card {
     cursor: pointer;
